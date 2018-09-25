@@ -16,6 +16,25 @@ export default [
     component: '../layouts/BasicLayout',
     Routes: ['src/pages/Authorized'],
     routes: [
+      // piccdashboard
+      { path: '/', redirect: '/piccdashboard/seniormanager' },
+      {
+        path: '/piccdashboard',
+        name: 'piccdashboard',
+        icon: 'dashboard',
+        routes: [
+          {
+            path: '/piccdashboard/seniormanager',
+            name: 'seniormanager',
+            component: './PiccDashboard/SeniorManager',
+          },
+          {
+            path: '/dashboard/monitor',
+            name: 'monitor',
+            component: './Dashboard/Monitor',
+          },
+        ],
+      },
       // dashboard
       { path: '/', redirect: '/dashboard/analysis' },
       {

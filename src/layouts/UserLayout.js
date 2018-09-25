@@ -25,7 +25,7 @@ const links = [
 
 const copyright = (
   <Fragment>
-    Copyright <Icon type="copyright" /> 2018 蚂蚁金服体验技术部出品
+    Copyright <Icon type="copyright" /> PICC浙江省公司出品
   </Fragment>
 );
 
@@ -34,9 +34,9 @@ class UserLayout extends React.PureComponent {
   // getPageTitle() {
   //   const { routerData, location } = this.props;
   //   const { pathname } = location;
-  //   let title = 'Ant Design Pro';
+  //   let title = 'P I C C';
   //   if (routerData[pathname] && routerData[pathname].name) {
-  //     title = `${routerData[pathname].name} - Ant Design Pro`;
+  //     title = `${routerData[pathname].name} - P I C C`;
   //   }
   //   return title;
   // }

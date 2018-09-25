@@ -21,6 +21,15 @@ for (let i = 0; i < fakeY2.length; i += 1) {
   });
 }
 
+const withMarket = [];
+const fakeYMarket = [-2.1, 3.4, 4.2, 2.1, 4, 7, 5, 6.1, -3.5, 9.3, 6, -3, 1, 5, 3, 6, 5];
+for (let i = 0; i < fakeYMarket.length; i += 1) {
+  withMarket.push({
+    x: moment(new Date(beginDay + 1000 * 60 * 60 * 24 * i)).format('YYYY-MM-DD'),
+    y: fakeYMarket[i],
+  });
+}
+
 const salesData = [];
 for (let i = 0; i < 12; i += 1) {
   salesData.push({
@@ -32,7 +41,7 @@ const searchData = [];
 for (let i = 0; i < 50; i += 1) {
   searchData.push({
     index: i + 1,
-    keyword: `搜索关键词-${i}`,
+    keyword: `数据产品-${i}`,
     count: Math.floor(Math.random() * 1000),
     range: Math.floor(Math.random() * 100),
     status: Math.floor((Math.random() * 10) % 2),
@@ -40,77 +49,81 @@ for (let i = 0; i < 50; i += 1) {
 }
 const salesTypeData = [
   {
-    x: '家用电器',
+    x: '传统直销',
     y: 4544,
   },
   {
-    x: '食用酒水',
+    x: '个人代理',
     y: 3321,
   },
   {
-    x: '个护健康',
+    x: '专业代理',
     y: 3113,
   },
   {
-    x: '服饰箱包',
+    x: '银保',
     y: 2341,
   },
   {
-    x: '母婴产品',
+    x: '经济代理',
     y: 1231,
   },
   {
-    x: '其他',
+    x: '人保V盟',
     y: 1231,
   },
 ];
 
 const salesTypeDataOnline = [
   {
-    x: '家用电器',
+    x: '传统直销',
     y: 244,
   },
   {
-    x: '食用酒水',
+    x: '个人代理',
     y: 321,
   },
   {
-    x: '个护健康',
+    x: '专业代理',
     y: 311,
   },
   {
-    x: '服饰箱包',
+    x: '银保',
     y: 41,
   },
   {
-    x: '母婴产品',
+    x: '经济代理',
     y: 121,
   },
   {
-    x: '其他',
+    x: '人保V盟',
     y: 111,
   },
 ];
 
 const salesTypeDataOffline = [
   {
-    x: '家用电器',
+    x: '传统直销',
     y: 99,
   },
   {
-    x: '食用酒水',
+    x: '个人代理',
     y: 188,
   },
   {
-    x: '个护健康',
+    x: '专业代理',
     y: 344,
   },
   {
-    x: '服饰箱包',
+    x: '银保',
     y: 255,
   },
   {
-    x: '其他',
+    x: '经济代理',
+    y: 65,
+  },
+  {
+    x: '人保V盟',
     y: 65,
   },
 ];
@@ -118,7 +131,7 @@ const salesTypeDataOffline = [
 const offlineData = [];
 for (let i = 0; i < 10; i += 1) {
   offlineData.push({
-    name: `Stores ${i}`,
+    name: `关键指标 ${i}`,
     cvr: Math.ceil(Math.random() * 9) / 10,
   });
 }
@@ -190,6 +203,7 @@ const getFakeChartData = {
   salesTypeDataOnline,
   salesTypeDataOffline,
   radarData,
+  withMarket,
 };
 
 export default {

@@ -7,7 +7,7 @@ import styles from './Login.less';
 
 const { Tab, UserName, Password, Mobile, Captcha, Submit } = Login;
 
-export default
+export default LoginPage
 @connect(({ login, loading }) => ({
   login,
   submitting: loading.effects['login/login'],
