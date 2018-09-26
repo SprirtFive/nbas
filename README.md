@@ -1,6 +1,6 @@
 English | [简体中文](./README.zh-CN.md) | [Русский](./README.ru-RU.md)
 
-<h1 align="center">NBSP</h1>
+<h1 align="center">NBAS</h1>
 
 <div align="center">
 
@@ -24,7 +24,7 @@ An out-of-box UI solution for enterprise applications as a React boilerplate.
 - Mirror Site in China: http://ant-design-pro.gitee.io
 
 ## 2.0 Released Now! 🎉🎉🎉
-[Announcing NBSP 2.0.0](https://medium.com/ant-design/beautiful-and-powerful-ant-design-pro-2-0-release-51358da5af95)
+[Announcing NBAS 2.0.0](https://medium.com/ant-design/beautiful-and-powerful-ant-design-pro-2-0-release-51358da5af95)
 
 ## Translation Recruitment :loudspeaker:
 
@@ -108,6 +108,6 @@ Modern browsers and IE11.
 
 Any type of contribution is welcome, here are some examples of how you may contribute to this project:
 
-- Use NBSP in your daily work.
+- Use NBAS in your daily work.
 - Submit [issues](http://github.com/ant-design/ant-design-pro/issues) to report bugs or ask questions.
 - Propose [pull requests](http://github.com/ant-design/ant-design-pro/pulls) to improve our code.
