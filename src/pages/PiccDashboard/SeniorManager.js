@@ -2,7 +2,7 @@
  * @Author: chenqian 
  * @Date: 2018-09-13 16:59:39 
  * @Last Modified by: chenqian
- * @Last Modified time: 2018-09-20 18:40:28
+ * @Last Modified time: 2018-09-27 19:44:02
  */
 
 import React, { Component } from 'react';
@@ -68,7 +68,7 @@ const rankingListData = [{
 
 @connect(({ piccchart, loading }) => ({
   chart: piccchart,
-  loading: loading.effects['chart/fetch'],
+  loading: loading.effects['piccchart/fetch'],
 }))
 class SeniorManager extends Component {
   constructor(props) {
@@ -113,7 +113,7 @@ class SeniorManager extends Component {
     const { dispatch } = this.props;
     this.reqRef = requestAnimationFrame(() => {
       dispatch({
-        type: 'chart/fetch',
+        type: 'piccchart/fetch',
       });
       this.timeoutId = setTimeout(() => {
         this.setState({
@@ -126,7 +126,7 @@ class SeniorManager extends Component {
   componentWillUnmount() {
     const { dispatch } = this.props;
     dispatch({
-      type: 'chart/clear',
+      type: 'piccchart/clear',
     });
     cancelAnimationFrame(this.reqRef);
     clearTimeout(this.timeoutId);
@@ -151,7 +151,7 @@ class SeniorManager extends Component {
     });
 
     dispatch({
-      type: 'chart/fetchSalesData',
+      type: 'piccchart/fetchSalesData',
     });
   };
 
@@ -162,7 +162,7 @@ class SeniorManager extends Component {
     });
 
     dispatch({
-      type: 'chart/fetchSalesData',
+      type: 'piccchart/fetchSalesData',
     });
   };
 
@@ -337,7 +337,7 @@ class SeniorManager extends Component {
               total={() => <Yuan>1265688</Yuan>}
               footer={
                 <Trend flag="up" style={{ marginRight: 16 }}>
-                <FormattedMessage id="ttt" defaultMessage="保单量"/>
+                保单量
                 <span className={styles.trendText}>6453</span>
                 </Trend>
               }
